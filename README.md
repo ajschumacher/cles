@@ -1,6 +1,6 @@
 # Common-Language Effect Size
 
-The Common-Language Effect Size (CLES) is the probability that a sample from one group is greater than a sample from another group. It's used sometimes as the effect size accompanying a [Mann–Whitney U test](https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test). If the two groups are positive and negative examples for a classifier, it's the same thing as [AUC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic).
+The [Common-Language Effect Size](https://en.wikipedia.org/wiki/Effect_size#Common_language_effect_size) (CLES) is the probability that a sample from one group is greater than a sample from another group. It's used sometimes as the effect size accompanying a [Mann–Whitney U test](https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test). If the two groups are positive and negative examples for a classifier, it's the same thing as [AUC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic).
 
 This is a Python implementation that calculates the exact (non-parametric) value. It enforces the strict inequality (no half-credit when equal).
 
