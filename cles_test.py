@@ -6,6 +6,18 @@ import cles
 
 
 def slow_cles(lessers, greaters):
+    """Common-Language Effect Size (quadratic implementation)
+
+    Probability that a random draw from `greater` is in fact greater
+    than a random draw from `lesser`.
+
+    This is the naive implementation that actually does every
+    comparison. It's slow, but it's easy to see that it's correct.
+    Also it doesn't handle edge cases (empty arguments).
+
+    Args:
+      lesser, greater: Iterables of comparables.
+    """
     numerator = 0
     for lesser in lessers:
         for greater in greaters:
@@ -29,7 +41,7 @@ class TestExceptions(unittest.TestCase):
 
     def test_no_raise_if_either_list_nonempty(self):
         cles.cles([1], [])
-        cles.cles([], [1])
+        cles.cles([], [1, 1])
         cles.cles([1], [2])
 
     def test_raises_if_both_empty_ndarrays(self):
