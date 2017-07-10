@@ -1,5 +1,7 @@
 import unittest
 
+import numpy as np
+
 import cles
 
 
@@ -21,9 +23,18 @@ class TestPythonTest(unittest.TestCase):
 
 class TestExceptions(unittest.TestCase):
 
-    def test_raises_if_both_empty(self):
+    def test_raises_if_both_empty_lists(self):
         with self.assertRaises(Exception):
-            cles.cles([], [1])
+            cles.cles([], [])
+
+    def test_no_raise_if_either_list_nonempty(self):
+        cles.cles([1], [])
+        cles.cles([], [1])
+        cles.cles([1], [2])
+
+    def test_raises_if_both_empty_ndarrays(self):
+        with self.assertRaises(Exception):
+            cles.cles(np.array([]), np.array([]))
 
 
 class TestSimpleCases(unittest.TestCase):

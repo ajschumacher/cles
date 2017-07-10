@@ -12,6 +12,12 @@ def cles(lessers, greaters):
     """
     if not lessers and not greaters:
         raise ValueError('At least one argument must be non-empty')
+    # These values are a bit arbitrary, but make some sense.
+    # (It might be appropriate to warn for these cases.)
+    if not lessers:
+        return 1
+    if not greaters:
+        return 0
     numerator = 0
     lessers, greaters = sorted(lessers), sorted(greaters)
     lesser_index = 0
