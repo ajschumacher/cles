@@ -36,6 +36,11 @@ class TestExceptions(unittest.TestCase):
         with self.assertRaises(Exception):
             cles.cles(np.array([]), np.array([]))
 
+    def test_no_raise_if_either_ndarray_nonempty(self):
+        cles.cles(np.array([1, 1]), np.array([]))
+        cles.cles(np.array([]), np.array([1, 1]))
+        cles.cles(np.array([1, 1]), np.array([1, 1]))
+
 
 class TestSimpleCases(unittest.TestCase):
 
