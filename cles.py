@@ -10,8 +10,8 @@ def cles(lessers, greaters):
     Args:
       lesser, greater: Iterables of comparables.
     """
-    if not lessers or not greaters:
-        raise ValueError('Both arguments must be non-empty')
+    if not lessers and not greaters:
+        raise ValueError('At least one argument must be non-empty')
     numerator = 0
     lessers, greaters = sorted(lessers), sorted(greaters)
     lesser_index = 0

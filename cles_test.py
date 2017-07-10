@@ -21,13 +21,9 @@ class TestPythonTest(unittest.TestCase):
 
 class TestExceptions(unittest.TestCase):
 
-    def test_raises_if_empty_lesser(self):
+    def test_raises_if_both_empty(self):
         with self.assertRaises(Exception):
             cles.cles([], [1])
-
-    def test_raises_if_empty_greater(self):
-        with self.assertRaises(Exception):
-            cles.cles([1], [])
 
 
 class TestSimpleCases(unittest.TestCase):
